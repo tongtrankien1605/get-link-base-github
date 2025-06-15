@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Link Base GitHub từ Link Raw</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="data:,">
+</head>
+<body>
+    <div class="container">
+        <h1>Get Link Base GitHub từ Link Raw</h1>
+        <div class="input-container">
+            <input type="text" id="urlInput" placeholder="Nhập URL raw GitHub">
+            <button class="clear-button" onclick="clearInput()">X</button>
+        </div>
+        <button class="get-origin-btn" onclick="getOriginLink()">Get Link Gốc</button>
+        <p id="result"></p>
+        <button class="btnCopy" id="copyButton" style="display:none;" onclick="copyLink()">Copy Link</button>
+    </div>
+    <audio id="backgroundMusic" loop>
+        <source src="https://raw.githubusercontent.com/tongtrankien1605/tongtrankien1605/main/global/audio/nhac-cuc-chat.mp3" type="audio/mpeg">
+    </audio>
+    <script src="script.js"></script>
+</body>
+</html>
