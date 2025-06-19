@@ -17,6 +17,7 @@ body {
     text-align: center;
     width: 90%;
     max-width: 700px;
+    position: relative; /* Để định vị nút loa */
 }
 
 h1 {
@@ -101,4 +102,19 @@ h1 {
 
 .btnCopy:hover {
     background: #5a32a3;
+}
+
+.speaker-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: transparent; /* Giữ trong suốt */
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.speaker-button:hover {
+    opacity: 0.8; /* Hiệu ứng mờ nhẹ khi hover */
 }

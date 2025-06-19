@@ -49,14 +49,33 @@ function clearInput() {
     copyButton.style.display = 'none';
 }
 
-// Phát nhạc khi tương tác
 const music = document.getElementById('backgroundMusic');
+const speakerIcon = document.getElementById('speakerIcon');
 let isPlaying = false;
+let isMuted = false;
 
 function toggleMusic() {
-    if (!isPlaying) {
+    if (!isPlaying && !isMuted) {
         music.play().then(() => {
             isPlaying = true;
+            speakerIcon.textContent = '🔊';
+        }).catch(error => {
+            console.log('Lỗi phát nhạc:', error);
+        });
+    }
+}
+
+function toggleSpeaker() {
+    if (isPlaying) {
+        music.pause();
+        isPlaying = false;
+        isMuted = true;
+        speakerIcon.textContent = '🔇';
+    } else {
+        music.play().then(() => {
+            isPlaying = true;
+            isMuted = false;
+            speakerIcon.textContent = '🔊';
         }).catch(error => {
             console.log('Lỗi phát nhạc:', error);
         });
@@ -66,7 +85,11 @@ function toggleMusic() {
 document.addEventListener('mousemove', toggleMusic);
 document.addEventListener('touchstart', toggleMusic);
 document.addEventListener('touchend', toggleMusic);
-document.addEventListener('click', toggleMusic);
+document.addEventListener('click', (e) => {
+    if (!e.target.closest('.speaker-button')) {
+        toggleMusic();
+    }
+});
 
 // Kiểm tra ảnh nền
 window.addEventListener('load', () => {
