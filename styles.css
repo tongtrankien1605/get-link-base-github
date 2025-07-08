@@ -5,7 +5,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url('https://raw.githubusercontent.com/tongtrankien1605/tongtrankien1605/main/global/image/city-night.jpg') no-repeat center center fixed;
+    background: url('https://cdn.jsdelivr.net/gh/tongtrankien1605/tongtrankien1605@main/global/image/city-night.jpg') no-repeat center center fixed;
     background-size: cover;
     font-family: Arial, sans-serif;
 }
@@ -17,7 +17,7 @@ body {
     text-align: center;
     width: 90%;
     max-width: 700px;
-    position: relative; /* Để định vị nút loa */
+    position: relative;
 }
 
 h1 {
@@ -108,7 +108,7 @@ h1 {
     position: absolute;
     top: 0;
     left: 0;
-    background: transparent; /* Giữ trong suốt */
+    background: transparent;
     border: none;
     font-size: 24px;
     cursor: pointer;
@@ -116,5 +116,5 @@ h1 {
 }
 
 .speaker-button:hover {
-    opacity: 0.8; /* Hiệu ứng mờ nhẹ khi hover */
+    opacity: 0.8;
 }

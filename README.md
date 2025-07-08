@@ -1,4 +1,4 @@
-## 🚀  **Chức năng của repository này là** Get link Base Github từ Link Raw !!! 🚀
+## 🚀  **Chức năng của repository này là** Get Link Base Github!!! 🚀
 
 <br/>
 

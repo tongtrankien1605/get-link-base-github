@@ -3,26 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get Link Base GitHub từ Link RAW by Tống Trần Kiên</title>
+    <title>Get Link Base Github by Tống Trần Kiên</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="data:,">
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
 </head>
 <body>
     <div class="container">
         <button class="speaker-button" onclick="toggleSpeaker()">
             <span id="speakerIcon">🔊</span>
         </button>
-        <h1>Get Link Base GitHub từ Link Raw by Tống Trần Kiên</h1>
+        <h1>Get Link Base Github by Tống Trần Kiên</h1>
         <div class="input-container">
-            <input type="text" id="urlInput" placeholder="Nhập URL raw GitHub">
+            <input type="text" id="urlInput" placeholder="Nhập URL raw GitHub hoặc URL CDN jsDelivr">
             <button class="clear-button" onclick="clearInput()">X</button>
         </div>
-        <button class="get-origin-btn" onclick="getOriginLink()">Get Link Gốc</button>
+        <button class="get-origin-btn" onclick="getOriginLink()">Lấy Link Base</button>
         <p id="result"></p>
-        <button class="btnCopy" id="copyButton" style="display:none;" onclick="copyLink()">Copy Link</button>
+        <button class="btnCopy" id="copyButton" style="display:none;" onclick="copyLink()">Sao Chép Link</button>
     </div>
     <audio id="backgroundMusic" loop>
-        <source src="https://raw.githubusercontent.com/tongtrankien1605/tongtrankien1605/main/global/audio/nhac-cuc-chat.mp3" type="audio/mpeg">
+        <source src="https://cdn.jsdelivr.net/gh/tongtrankien1605/tongtrankien1605@main/global/audio/nhac-cuc-chat.mp3" type="audio/mpeg">
     </audio>
     <script src="script.js"></script>
 </body>
