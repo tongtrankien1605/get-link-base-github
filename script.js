@@ -1,4 +1,4 @@
-// Khởi tạo trạng thái nhạc nền
+// Khởi tạo trạng thái của nhạc nền
 const music = document.getElementById('backgroundMusic');
 const speakerIcon = document.getElementById('speakerIcon');
 let isPlaying = false;
@@ -71,6 +71,20 @@ function copyLink() {
     });
 }
 
+// Dán từ clipboard
+async function pasteFromClipboard() {
+    try {
+        const text = await navigator.clipboard.readText();
+        document.getElementById('urlInput').value = text;
+        document.getElementById('result').innerHTML = '';
+        document.getElementById('copyButton').style.display = 'none';
+        // alert('Đã dán URL!');
+    } catch (error) {
+        console.log('Lỗi dán từ clipboard:', error);
+        alert('Không thể dán từ clipboard. Vui lòng dán thủ công.');
+    }
+}
+
 // Điều khiển nhạc nền khi tương tác
 function toggleMusic() {
     if (!isPlaying && !isMuted) {
@@ -117,4 +131,8 @@ window.addEventListener('load', () => {
     bgImage.src = 'https://cdn.jsdelivr.net/gh/tongtrankien1605/tongtrankien1605@main/global/image/city-night.jpg';
     bgImage.onload = () => console.log('Ảnh nền tải thành công');
     bgImage.onerror = () => console.log('Lỗi tải ảnh nền, kiểm tra link');
+    // Ẩn nút dán nếu clipboard API không được hỗ trợ
+    if (!navigator.clipboard || !navigator.clipboard.readText) {
+        document.querySelector('.paste-button').style.display = 'none';
+    }
 });

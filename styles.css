@@ -33,7 +33,7 @@ h1 {
 
 #urlInput {
     width: 100%;
-    padding: 10px 40px 10px 10px;
+    padding: 10px 70px 10px 10px; /* Tăng padding phải để chứa cả nút dán và X */
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -59,6 +59,26 @@ h1 {
 
 .clear-button:hover {
     color: #973232;
+}
+
+.paste-button {
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: #000000;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 0;
+    line-height: normal;
+    display: flex;
+    align-items: center;
+}
+
+.paste-button:hover {
+    color: #007bff;
 }
 
 .get-origin-btn {
